@@ -10,7 +10,7 @@ The code and data for each function of the robot are in each corresponding folde
 <br>
 Here is the overall process:
 
-![process](https://user-images.githubusercontent.com/66956640/161036931-52598f8c-9e37-4812-b414-19560bbc309a.png)
+![process](https://user-images.githubusercontent.com/66956640/161036931-52598f8c-9e37-4812-b414-19560bbc309a.png| width=80)
 
 ## Authors
 
