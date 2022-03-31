@@ -7,8 +7,10 @@ The whole system runs on ROS Melodic on Ubuntu 18.04.
 
 The code and data for each function of the robot are in each corresponding folder.
 
+![process](https://user-images.githubusercontent.com/66956640/161036931-52598f8c-9e37-4812-b414-19560bbc309a.png)
 
 ## Authors
+
 
 Anthony Youssef and Xinyu Pang were responsible for blanket corner detection using Realsense RGBD camera
 
