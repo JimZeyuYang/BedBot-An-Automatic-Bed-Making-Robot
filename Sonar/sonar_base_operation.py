@@ -13,7 +13,7 @@ import sys
 from socket import *
 
 s=socket()
-s.connect(("10.0.0.149",6667))
+s.connect(("10.0.0.149",6667)) #change address and port in accordance with instructions in readme
 
 
 
