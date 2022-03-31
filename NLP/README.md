@@ -20,3 +20,19 @@ Modifications
 - different commands can be added in the nlp_thread_func function and the variable can be changed to include more output states.
 - The two call back functions are for processing the data from the sonar and baxter arm topics and must NOT be modified to ensure system works.
 	
+Voice commands and responses:
+
+1) ”Hello Robot”
+	- ”Hello I am Bedbot, what can I help you with?”
+2) ”Go To Bed”
+	- ”Ok,I will go towards your bed”
+3) ”Grab”
+	- ”Ok, I will grab your bed sheet.”
+4) ”Make Bed”
+	- ”Ok, I will make your bed.”
+5) ”Stop”
+	- ”Stopping current action.”
+6) ”Continue”
+	- ”I will now resume my previous action”
+7) ”Terminate”
+	- ”Terminating”
