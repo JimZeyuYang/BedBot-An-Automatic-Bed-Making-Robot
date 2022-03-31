@@ -24,7 +24,8 @@ Modifications
 	
 
 
-\\
+<br>
+<br>
 
 SONAR FOR RIDGEBACK:
 The sonar_base_operation.py script is the only necessary script to enable sonar naviagtion and safety-zoning for the base.
