@@ -1,9 +1,9 @@
-// File Path
+### Update the default rethink EE griper to Robotiq gripper
 
+// File Path
 /ros_ws/src/baxter_common/rethink_ee_description/urdf/electric_gripper/fingers/standard_narrow_update.xacro
 
 /ros_ws/src/baxter_common/baxter_description/urdf/left_end_effector_hook.urdf.xacro
-
 /ros_ws/src/baxter_common/baxter_description/urdf/right_end_effector_hook.urdf.xacro
 
 
