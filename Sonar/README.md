@@ -1,4 +1,5 @@
-SONAR FOR BAXTER ROBOT:
+**SONAR FOR BAXTER ROBOT:**
+<br>
 The sonar_base_baxter.py script is the script that enables sonar naviagtion and safety-zoning for the baxter robot.
 
 Name: Sebastian Aegidius
@@ -27,7 +28,8 @@ Modifications
 <br>
 <br>
 
-SONAR FOR RIDGEBACK:
+**SONAR FOR RIDGEBACK:**
+<br>
 The sonar_base_operation.py script is the only necessary script to enable sonar naviagtion and safety-zoning for the base.
 
 Name: Konrad Seliger
