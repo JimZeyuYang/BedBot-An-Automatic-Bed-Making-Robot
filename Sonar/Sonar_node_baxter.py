@@ -52,16 +52,6 @@ def callback(data):
         pub.publish(Int32(status))
         flag_on = False
 
-    #pub.publish(Int32(status))
-
-
-    # status = 1
-    # pub.publish(Int32(status))
-    # rospy.sleep(5)
-    # status = 0
-    # pub.publish(Int32(status))
-    # rospy.sleep(15)
-
 
 def main():
     rospy.init_node("Subscriber_Node", anonymous=True)
