@@ -27,7 +27,7 @@ Zile Yang and Jing Wu were responsible for controlling the movement of the Ridge
 
 Xinping Chen was responsible for developing the graphical user interface
 
-Sohyeon Im was responsible for developing the speech processing
+Sohyeon Im and Sebastian Aegidius and Xinuy Pang were responsible for developing the speech processing
 
 Sebastian Aegidius and Konrad Seliger were responsible safety and collision aviodance
 
