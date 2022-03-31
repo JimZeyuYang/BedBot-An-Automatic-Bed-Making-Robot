@@ -19,7 +19,7 @@ Anthony Youssef and Xinyu Pang were responsible for blanket corner detection usi
 
 Jiaming Huang and Zeyu Yang were responsible for the hand-eye calibration
 
-Zhiyuan Yo was responsible for controlling the Robotiq gripper
+Zhiyuan You was responsible for controlling the Robotiq gripper
 
 Yulin Shen was responsible for arm movement and motion planning
 
