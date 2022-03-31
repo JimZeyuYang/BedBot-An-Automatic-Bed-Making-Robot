@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<robot name="left_end_effector" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find rethink_ee_description)/urdf/electric_gripper/rethink_electric_gripper.xacro" />
+  <xacro:rethink_electric_gripper side="left"
+                                  l_finger="standard_narrow_update"
+                                  l_finger_slot="2"
+                                  l_finger_tip="half_round_tip"
+                                  l_finger_grasp="inner"
+                                  r_finger="standard_narrow_update"
+                                  r_finger_slot="2"
+                                  r_finger_tip="half_round_tip"
+                                  r_finger_grasp="inner"/>
+</robot>
