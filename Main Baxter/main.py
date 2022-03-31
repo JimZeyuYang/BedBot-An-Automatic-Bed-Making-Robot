@@ -225,137 +225,11 @@ def nlp_callfunc(activity_manager_obj, state_manager, gripper_ctrl, data):
         print("NLP Command {}: Grabbing!".format(c))
         routine_grab_thr = thr.Thread(target=routine_grab, args=(activity_manager_obj, state_manager, gripper_ctrl))
         routine_grab_thr.start()
-        # # Clear activities
-        # activity_manager_obj.immediate_stop()
-        # activity_manager_obj.unpause_activity(wait_id=wait_ids["nlp"])
-        # activity_manager_obj.add_activity(["SetState", (state_dic["grab"],)])
-
-        # # Tuckle
-        # activity_manager_obj.add_activity(["Gripper", ("BOTH", "open")])
-        # activity_manager_obj.add_activity(["MoveJoint", ("L", bedbot_init_joint_value[:7])])
-        # activity_manager_obj.add_activity(["MoveJoint", ("R", bedbot_init_joint_value[7:])])
-        # while activity_manager_obj.state() != "Idle":
-        #     rospy.sleep(0.5)
-        
-        # # Ask for points on sheet
-        # activity_manager_obj.add_activity(["CamRequest", ("blue", "green")])
-        # rospy.sleep(2)
-        # while activity_manager_obj.state() != "Idle":
-        #     rospy.sleep(0.5)
-        # coord1 = list(camera_coord_dict["blue"])
-        # coord2 = list(camera_coord_dict["green"])
-
-        # # Move to point
-        # if coord1[1] > coord2[1]:
-        #     coordL = coord1
-        #     coordR = coord2
-        # else:
-        #     coordL = coord2
-        #     coordR = coord1
-        #     poseL_arr = coord2 + degree_90_orientation
-        #     poseR_arr = coord1 + degree_90_orientation
-        # # x - cali
-        # coordL[0] += 0.15
-        # coordR[0] += 0.1
-        # # # y - cali
-        # # coordL[1] -= 0.05
-        # # coordR[1] -= 0.05
-        # # z - cali
-        # coordL[2] = -0.422
-        # coordR[2] = -0.422
-
-        # poseL_arr = coordL + degree_90_orientation
-        # poseR_arr = coordR + degree_90_orientation
-        # poseL_arr[2] += 0.2
-        # poseR_arr[2] += 0.2
-        # activity_manager_obj.add_activity(["MoveEndEffector_cart", ("L", poseL_arr)])
-        # activity_manager_obj.add_activity(["MoveEndEffector_cart", ("R", poseR_arr)])
-        # while activity_manager_obj.state() != "Idle":
-        #     rospy.sleep(0.5)
-
-        # # Reach to points and grab
-        # poseL_arr[2] -= 0.205
-        # poseR_arr[2] -= 0.205
-        # activity_manager_obj.add_activity(["MoveEndEffector_cart", ("L", poseL_arr)])
-        # activity_manager_obj.add_activity(["Gripper", ("L", "close")])
-        # activity_manager_obj.add_activity(["MoveEndEffector_cart", ("R", poseR_arr)])
-        # activity_manager_obj.add_activity(["Gripper", ("R", "close")])
-        # while activity_manager_obj.state() != "Idle":
-        #     rospy.sleep(0.5)
-
-        # # Check whether grab succeeds
-        # # ..........
-
-        # activity_manager_obj.add_activity(["SetState", (state_dic["ready"],)])
-
 
     if c == nlp_command_dic["make_bed"]:    # Make bed
         print("NLP Command {}: Making bed!".format(c))
         routine_makebed_thr = thr.Thread(target=routine_makebed, args=(activity_manager_obj, state_manager, gripper_ctrl))
         routine_makebed_thr.start()
-        # activity_manager_obj.immediate_stop()
-        # activity_manager_obj.unpause_activity(wait_id=wait_ids["nlp"])  # Automatically restore state
-        # activity_manager_obj.add_activity(["SetState", (state_dic["make_bed"],)])
-
-        # # Move to side
-        # poseL_arr = [0.5, 0.6, -0.1] + degree_90_orientation
-        # poseR_arr = [0.5, -0.6, -0.1] + degree_90_orientation
-        # activity_manager_obj.add_activity(["MoveEndEffector_cart", ("L", poseL_arr)])
-        # activity_manager_obj.add_activity(["MoveEndEffector_cart", ("R", poseR_arr)])
-        # # while activity_manager_obj.state() != "Idle":
-        # #     rospy.sleep(0.5)
-
-        # # Move front+up step1/2
-        # poseL_arr[0] += 0.25    # x
-        # poseR_arr[0] += 0.25    # x
-        # poseL_arr[2] += 0.15    # z
-        # poseR_arr[2] += 0.15    # z
-        # poseL_arr = poseL_arr[0:3] + degree_45_orientation
-        # poseR_arr = poseR_arr[0:3] + degree_45_orientation
-        # activity_manager_obj.add_activity(["MoveEndEffector_cart", ("L", poseL_arr)])
-        # activity_manager_obj.add_activity(["MoveEndEffector_cart", ("R", poseR_arr)])
-        # # while activity_manager_obj.state() != "Idle":
-        # #     rospy.sleep(0.5)
-
-        # # Move front+up step2/2
-        # poseL_arr[0] = 1.18    # x
-        # poseR_arr[0] = 1.18    # x
-        # poseL_arr[2] = 0.65    # z
-        # poseR_arr[2] = 0.65    # z
-        # poseL_arr = poseL_arr[0:3] + degree_0_orientation
-        # poseR_arr = poseR_arr[0:3] + degree_0_orientation
-        # activity_manager_obj.add_activity(["MoveEndEffector_cart", ("L", poseL_arr)])
-        # activity_manager_obj.add_activity(["MoveEndEffector_cart", ("R", poseR_arr)])
-        # # while activity_manager_obj.state() != "Idle":
-        # #     rospy.sleep(0.5)
-        
-        # # Move back_down step1/2
-        # poseL_arr[0] -= 0.3    # x
-        # poseR_arr[0] -= 0.3    # x
-        # poseL_arr[2] -= 0.4    # z
-        # poseR_arr[2] -= 0.4    # z
-        # poseL_arr = poseL_arr[0:3] + degree_45_orientation
-        # poseR_arr = poseR_arr[0:3] + degree_45_orientation
-        # activity_manager_obj.add_activity(["MoveEndEffector_cart", ("L", poseL_arr)])
-        # activity_manager_obj.add_activity(["MoveEndEffector_cart", ("R", poseR_arr)])
-        # # while activity_manager_obj.state() != "Idle":
-        # #     rospy.sleep(0.5)
-        
-        # # Move back_down step2/2
-        # poseL_arr[0] = 0.42    # x
-        # poseR_arr[0] = 0.42    # x
-        # poseL_arr[2] -= 0.3    # z
-        # poseR_arr[2] -= 0.3    # z
-        # poseL_arr = poseL_arr[0:3] + degree_90_orientation
-        # poseR_arr = poseR_arr[0:3] + degree_90_orientation
-        # activity_manager_obj.add_activity(["MoveEndEffector_cart", ("L", poseL_arr)])
-        # activity_manager_obj.add_activity(["MoveEndEffector_cart", ("R", poseR_arr)])
-        # # while activity_manager_obj.state() != "Idle":
-        # #     rospy.sleep(0.5)
-        
-        # # Open grippers
-        # activity_manager_obj.add_activity(["Gripper", ("BOTH", "open")])
-        # activity_manager_obj.add_activity(["SetState", (state_dic["ready"],)])
 
 
     elif c == nlp_command_dic["pause"]:  # Pause
@@ -686,13 +560,9 @@ def main():
 
     except rospy.ROSInterruptException:
         print "Shutting down"
-        # moveit_commander.roscpp_shutdown()
-        # moveit_commander.os._exit(0)
         return
     except KeyboardInterrupt:
         print "Shutting down"
-        # moveit_commander.roscpp_shutdown()
-        # moveit_commander.os._exit(0)
         return
 
 if __name__ == '__main__':
